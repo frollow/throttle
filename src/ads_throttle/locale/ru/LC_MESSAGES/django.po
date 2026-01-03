@@ -1,0 +1,169 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ads_throttle 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-01 00:00+0000\n"
+"PO-Revision-Date: 2025-01-01 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+msgid "Ads throttle"
+msgstr "Ограничение показов рекламы"
+
+msgid "Ads throttle overrides"
+msgstr "Переписать правила показа рекламы"
+
+msgid "View window (seconds)"
+msgstr "Окно просмотров (секунды)"
+
+msgid "Time window in seconds for counting ad impressions."
+msgstr "Окно времени в секундах для подсчета показов рекламы."
+
+msgid "View threshold"
+msgstr "Порог просмотров"
+
+msgid "How many ad impressions are allowed within the window before blocking."
+msgstr "Сколько показов допускается в пределах окна до блокировки."
+
+msgid "Block duration (seconds)"
+msgstr "Длительность блокировки (секунды)"
+
+msgid "How long to block ads after the threshold is reached, in seconds."
+msgstr "Сколько времени блокировать рекламу после достижения порога (в секундах)."
+
+msgid "Event record interval (seconds)"
+msgstr "Интервал записи событий (секунды)"
+
+msgid "How often (in seconds) to update block counters for a single viewer/page pair."
+msgstr "Как часто (в секундах) обновлять счетчики блокировки для пары зритель/страница."
+
+msgid "Updated at"
+msgstr "Обновлено"
+
+msgid "Ads throttle setting"
+msgstr "Настройка ограничения рекламы"
+
+msgid "Ads throttle settings"
+msgstr "Настройки ограничения рекламы"
+
+msgid "Scope"
+msgstr "Область"
+
+msgid "Page path or empty to apply site-wide."
+msgstr "Путь страницы или пусто для применения ко всему сайту."
+
+msgid "Viewer ID"
+msgstr "Идентификатор зрителя"
+
+msgid "Format: user:<id> or session:<key>."
+msgstr "Формат: user:<id> или session:<key>."
+
+msgid "User"
+msgstr "Пользователь"
+
+msgid "IP address hash"
+msgstr "Хеш IP-адреса"
+
+msgid "SHA256 hash of the IP address."
+msgstr "SHA256-хеш IP-адреса."
+
+msgid "Force show"
+msgstr "Принудительно показать"
+
+msgid "Force block"
+msgstr "Принудительно заблокировать"
+
+msgid "Expires at"
+msgstr "Действует до"
+
+msgid "Created at"
+msgstr "Создано"
+
+msgid "all viewers"
+msgstr "все зрители"
+
+msgid "all scopes"
+msgstr "все области"
+
+msgid "Override for %(target)s (%(scope)s)"
+msgstr "Правило для %(target)s (%(scope)s)"
+
+msgid "Ads throttle event"
+msgstr "Событие ограничения рекламы"
+
+msgid "Ads throttle events"
+msgstr "События ограничения рекламы"
+
+msgid "Viewer hash"
+msgstr "Хеш зрителя"
+
+msgid "First seen"
+msgstr "Первое появление"
+
+msgid "Last seen"
+msgstr "Последнее появление"
+
+msgid "Count"
+msgstr "Количество"
+
+msgid "Blocked"
+msgstr "Заблокировано"
+
+msgid "Ads throttle event (%(scope)s)"
+msgstr "Событие ограничения рекламы (%(scope)s)"
+
+msgid "Apply to user"
+msgstr "Применить к пользователю"
+
+msgid "Apply to IP"
+msgstr "Применить к IP"
+
+msgid "Apply to all in scope"
+msgstr "Применить ко всем в области"
+
+msgid "Block"
+msgstr "Заблокировать"
+
+msgid "Show"
+msgstr "Показать"
+
+msgid "Apply to"
+msgstr "Применить к"
+
+msgid "Action"
+msgstr "Действие"
+
+msgid "Choose the action for matching viewers."
+msgstr "Выберите действие для совпавших зрителей."
+
+msgid "Raw IP address"
+msgstr "IP-адрес"
+
+msgid "Enter an IP address to compute SHA256. The raw value is not stored."
+msgstr "Введите IP-адрес для вычисления SHA256. Исходное значение не сохраняется."
+
+msgid "Leave empty to apply site-wide. For a specific page use the full path (for example, /courses/abc/)."
+msgstr "Оставьте пустым, чтобы применить ко всему сайту. Для конкретной страницы укажите полный путь (например, /courses/abc/)."
+
+msgid "The 'all in scope' mode applies to all viewers inside the scope, or to the entire site if the scope is empty."
+msgstr "Режим «ко всем в области» применяется ко всем зрителям в указанной области или ко всему сайту, если область пустая."
+
+msgid "Scope must be empty or start with '/'. Example: /courses/abc/."
+msgstr "Область должна быть пустой или начинаться с '/'. Пример: /courses/abc/."
+
+msgid "Choose an action: show or block."
+msgstr "Нужно выбрать действие: показать или заблокировать."
+
+msgid "Provide a user or viewer ID for the override."
+msgstr "Укажите пользователя или viewer ID для правила."
+
+msgid "Provide an IP address to compute the hash."
+msgstr "Укажите IP-адрес для вычисления хеша."
+
+msgid "All"
+msgstr "Все"
