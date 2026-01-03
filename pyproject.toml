@@ -4,7 +4,7 @@ build-backend = "uv_build"
 
 [project]
 name = "ads_throttle"
-version = "0.1.2"
+version = "0.1.3"
 authors = [
   { name="Artem Frolov", email="pypi-username@mail.ru" },
 ]
@@ -35,3 +35,4 @@ dependencies = [
 [project.urls]
 Homepage = "https://github.com/frollow/throttle"
 Issues = "https://github.com/frollow/throttle/issues"
+Documentation = "https://github.com/frollow/throttle/tree/master/docs"
