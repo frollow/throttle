@@ -4,7 +4,7 @@ build-backend = "uv_build"
 
 [project]
 name = "ads_throttle"
-version = "0.1.1"
+version = "0.1.2"
 authors = [
   { name="Artem Frolov", email="pypi-username@mail.ru" },
 ]

@@ -13,7 +13,8 @@ from ads_throttle.models import (AdsThrottleEvent, AdsThrottleOverride,
 from ads_throttle.throttling import (_get_client_ip, _get_override_decision,
                                      _get_settings_values, _hash_ip,
                                      _record_event, _should_record_event,
-                                     _viewer_id, should_show_ads)
+                                     _viewer_fingerprint, _viewer_id,
+                                     should_show_ads)
 from tests.utils import build_request
 
 
@@ -78,7 +79,7 @@ class ViewerIdTests(TestCase):
 
 
 class ClientIpTests(SimpleTestCase):
-    @override_settings(ADS_THROTTLE_IP_HEADER="X_REAL_IP")
+    @override_settings(ADS_THROTTLE_IP_HEADER="X-Real-IP")
     def test_uses_custom_header_when_configured(self):
         request = build_request(
             meta={"HTTP_X_REAL_IP": " 10.0.0.5 "}, with_session=False
@@ -99,6 +100,20 @@ class ClientIpTests(SimpleTestCase):
     def test_falls_back_to_remote_addr(self):
         request = build_request(meta={"REMOTE_ADDR": "8.8.8.8"}, with_session=False)
         self.assertEqual(_get_client_ip(request), "8.8.8.8")
+
+
+class ViewerFingerprintTests(SimpleTestCase):
+    @override_settings(ADS_THROTTLE_IP_HEADER="X-Real-IP")
+    def test_uses_trusted_ip_for_fingerprint(self):
+        request = build_request(
+            with_session=False,
+            meta={
+                "REMOTE_ADDR": "1.1.1.1",
+                "HTTP_X_REAL_IP": "10.0.0.5",
+                "HTTP_USER_AGENT": "ua",
+            },
+        )
+        self.assertEqual(_viewer_fingerprint(request), "anonymous:10.0.0.5:ua")
 
 
 class HashIpTests(SimpleTestCase):

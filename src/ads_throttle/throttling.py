@@ -62,14 +62,15 @@ def _viewer_id(request: HttpRequest) -> str:
 def _viewer_fingerprint(request: HttpRequest) -> str:
     """Build a stable fingerprint string for the current viewer."""
     viewer_id = _viewer_id(request)
-    ip_address = request.META.get("REMOTE_ADDR", "")
+    ip_address = _get_client_ip(request)
     user_agent = request.META.get("HTTP_USER_AGENT", "")
     return f"{viewer_id}:{ip_address}:{user_agent}"
 
 
 def _get_client_ip(request: HttpRequest) -> str:
     """Determine the client IP address using trusted headers when present."""
-    header_name = getattr(settings, "ADS_THROTTLE_IP_HEADER", "").upper()
+    header_name = getattr(settings, "ADS_THROTTLE_IP_HEADER", "")
+    header_name = header_name.strip().upper().replace("-", "_")
     if header_name:
         custom_ip = request.META.get(f"HTTP_{header_name}")
         if custom_ip:
