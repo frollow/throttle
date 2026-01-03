@@ -1,0 +1,38 @@
+[build-system]
+requires = ["uv_build >= 0.9.18, <0.10.0"]
+build-backend = "uv_build"
+
+[project]
+name = "ads_throttle"
+version = "0.1.3"
+authors = [
+  { name="Artem Frolov", email="pypi-username@mail.ru" },
+]
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Django :: 5.2",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+dependencies = [
+    "django>=5.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/frollow/throttle"
+Issues = "https://github.com/frollow/throttle/issues"
+Documentation = "https://github.com/frollow/throttle/tree/master/docs"
