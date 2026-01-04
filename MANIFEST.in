@@ -1,2 +1,3 @@
 recursive-include django_polls/static *
 recursive-include django_polls/templates *
+include README.pypi.md
